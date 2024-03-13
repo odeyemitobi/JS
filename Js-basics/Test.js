@@ -18,7 +18,7 @@ greet("Bricker", "Odeyemi");
 
 // function that calculates a value
 function square(number) {
-  return number * number;
+  return number / number;
 }
 
 console.log(square(10));
