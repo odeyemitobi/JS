@@ -133,12 +133,51 @@ let addup = sumup(2, 8);
 console.log(addup);
 
 ////////////////////////////////////////////////////////////////
-// Type Aliases
+/* Type Aliases */
 type Aliases = number | string | boolean;
-type OurNames = { name: number | string | boolean, aliases: string };
+type OurNames = { name: Aliases, aliases: Aliases };
 
 const Details = (names: OurNames) => {
   console.log(`${names.name} is a good ${names.aliases}`);
 }
 
-Details({name: "Tobi", aliases: "Programmer"});
+Details({ name: "Tobi", aliases: "Programmer" });
+
+////////////////////////////////////////////////////////////////
+/* function signature */
+let informant: (n: string, m: string) => void;
+informant = (x: string, y: string) => {
+  console.log(`${x} says ${y}`);
+};
+
+informant("Tobi", "Hello");
+
+/* signature 2 */
+let maths: (one: number, two: number, three: string) => number;
+
+maths = (numOne: number, numTwo: number, numThree: string) => {
+  if (numThree === "+") {
+    return numOne + numTwo;
+  } else if (numThree === "-") {
+    return numOne - numTwo;
+  } else if (numThree === "*") {
+    return numOne * numTwo;
+  } else if (numThree === "/") {
+    return numOne / numTwo;
+  } else {
+    return NaN;
+  }
+}
+
+console.log(maths(2, 3, "/"));
+
+/* signature 3 */
+let logger: (entry: { user: string, age: number }) => void;
+
+type Human = {user: string, age: number};
+
+logger = (putin: Human) => {
+  console.log(`${putin.user} is ${putin.age} years old`);
+}
+
+logger({ user: "Tobi", age: 23 });

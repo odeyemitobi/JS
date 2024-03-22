@@ -91,3 +91,36 @@ const Details = (names) => {
     console.log(`${names.name} is a good ${names.aliases}`);
 };
 Details({ name: "Tobi", aliases: "Programmer" });
+////////////////////////////////////////////////////////////////
+/* function signature */
+let informant;
+informant = (x, y) => {
+    console.log(`${x} says ${y}`);
+};
+informant("Tobi", "Hello");
+/* signature 2 */
+let maths;
+maths = (numOne, numTwo, numThree) => {
+    if (numThree === "+") {
+        return numOne + numTwo;
+    }
+    else if (numThree === "-") {
+        return numOne - numTwo;
+    }
+    else if (numThree === "*") {
+        return numOne * numTwo;
+    }
+    else if (numThree === "/") {
+        return numOne / numTwo;
+    }
+    else {
+        return NaN;
+    }
+};
+console.log(maths(2, 3, "/"));
+/* signature 3 */
+let logger;
+logger = (putin) => {
+    console.log(`${putin.user} is ${putin.age} years old`);
+};
+logger({ user: "Tobi", age: 23 });
