@@ -60,7 +60,6 @@ let uid: string | boolean;
 uid = "Tobi";
 uid = false;
 
-
 // Objects
 
 let brii: {
@@ -69,7 +68,6 @@ let brii: {
   isAlive: boolean,
 };
 
-
 brii = {
   name: "Brii",
   age: 23,
@@ -77,7 +75,6 @@ brii = {
 };
 
 console.log(brii);
-
 
 // Dynamic Types
 
@@ -123,7 +120,6 @@ eni = (a: number, b: number, c: number | string = 15) => {
 }
 
 eni(12, 10);
-
 
 let sumup = (a: number, b: number) => {
   return a * b;
@@ -181,3 +177,5 @@ logger = (putin: Human) => {
 }
 
 logger({ user: "Tobi", age: 23 });
+
+/* DOM and Type casting */
