@@ -71,3 +71,23 @@ dor.push(4567);
 dor.push({ name: "Dor" });
 console.log(dor);
 console.log("Who dae XD");
+// Arrow function
+let cruiser = () => {
+    console.log("Hello, Brii");
+};
+cruiser();
+let eni;
+eni = (a, b, c = 15) => {
+    console.log(a + b);
+    console.log(c);
+};
+eni(12, 10);
+let sumup = (a, b) => {
+    return a * b;
+};
+let addup = sumup(2, 8);
+console.log(addup);
+const Details = (names) => {
+    console.log(`${names.name} is a good ${names.aliases}`);
+};
+Details({ name: "Tobi", aliases: "Programmer" });

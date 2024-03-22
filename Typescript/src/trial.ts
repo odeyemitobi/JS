@@ -108,3 +108,37 @@ dor.push({name: "Dor"});
 
 console.log(dor);
 console.log("Who dae XD");
+
+// Arrow function
+let cruiser = () => {
+  console.log("Hello, Brii");
+}
+
+cruiser()
+
+let eni: Function;
+eni = (a: number, b: number, c: number | string = 15) => {
+  console.log(a + b);
+  console.log(c);
+}
+
+eni(12, 10);
+
+
+let sumup = (a: number, b: number) => {
+  return a * b;
+}
+
+let addup = sumup(2, 8);
+console.log(addup);
+
+////////////////////////////////////////////////////////////////
+// Type Aliases
+type Aliases = number | string | boolean;
+type OurNames = { name: number | string | boolean, aliases: string };
+
+const Details = (names: OurNames) => {
+  console.log(`${names.name} is a good ${names.aliases}`);
+}
+
+Details({name: "Tobi", aliases: "Programmer"});
