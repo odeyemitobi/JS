@@ -1,8 +1,6 @@
-import { formatter } from './../Interfaces/formatter.js';
+import { formatter } from "./../Interfaces/formatter.js";
 
-
-
-export class Invoice implements formatter {
+export class payment implements formatter {
   /* first step */
   // client: string;
   // details: string;
@@ -16,12 +14,12 @@ export class Invoice implements formatter {
 
   /* second step */
   constructor(
-    readonly client: string,
+    readonly recipient: string,
     private details: string,
     public amount: number
   ) {}
 
   format() {
-    return `${this.client} will give ${this.amount} as ${this.details}`;
+    return `${this.recipient} will be given ${this.amount} as ${this.details}`;
   }
 }
